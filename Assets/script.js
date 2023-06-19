@@ -23,8 +23,13 @@ if (numberOfCharacters < 8 || numberOfCharacters > 128) {
 // LowerCase options
 hasLowercase = confirm("Click OK to confirm including lowercase characters");
 if (hasLowercase) {
-  var convertToLowercase = alert("Your password will have lowercase characters.");
+  alert("Your password will have lowercase characters.");
 }
+else {
+  alert("Your password will NOT have lowercase characters.");
+}
+
+// UpperCase options
 
 
 

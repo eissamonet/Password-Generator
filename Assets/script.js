@@ -10,10 +10,21 @@ function generatePassword(){
 // Ask user for their input
 numberOfCharacters = prompt("Choose between 8-128 characters for your password.");
 if (numberOfCharacters < 8 || numberOfCharacters > 128) {
-  return "Invalid number of characters.";}
-  else if (isNaN(numberOfCharacters)) {
+  return "Choose a valid number of characters.";
+
+  // check valid character length
+} else if (isNaN(numberOfCharacters)) {
     numberOfCharacters = prompt("Enter a valid number.");
   }
+
+  else {
+    window.alert("Your password will be" + numberOfCharacters + "characters long.");
+  }
+// LowerCase options
+hasLowercase = confirm("Click OK to confirm including lowercase characters");
+if (hasLowercase) {
+  var convertToLowercase = alert("Your password will have lowercase characters.");
+}
 
 
 

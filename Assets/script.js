@@ -14,12 +14,33 @@ function generatePassword() {
 //   b. lowercase, uppercase, numbers, special characters
 numberOfCharacters = prompt("Choose between 8-128 characters for your password.");
 if (numericCharacters < 8 || numericCharacters > 128) {
-  return "Choose valid number of characters.";
-} else if (is NaN(numberOfCharacters)) {
+  return "Choose a valid number of characters.";
+} else if (isNaN(numberOfCharacters)) {
   numberOfCharacters = prompt("Enter a valid number.");
 }
+
+hasUppercase = confirm("Do you want uppercase characters?");
+if (hasUppercase) {
+  alert ("Your password will have uppercase characters.");
+}
 else {
-  alert("Your password will be" + numericCharacters + "characters long.");
+  alert("Your password will NOT have uppercase");
+}
+
+hasLowercase = confirm("Do you want lowercase characters?");
+if (hasUppercase) {
+  alert ("Your password will have lowerrcase characters.");
+}
+else {
+  alert("Your password will NOT have lowercase");
+}
+
+hasSpecial = confirm("Do you want special characters?");
+if (hasUppercase) {
+  alert ("Your password will have special characters.");
+}
+else {
+  alert("Your password will NOT have special characters");
 }
 
 // 2. Validate input

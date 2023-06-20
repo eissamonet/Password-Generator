@@ -31,3 +31,7 @@ N/A
 ## License
 
 MIT License
+
+Password Generator 
+
+<img width="1440" alt="Screen Shot 2023-06-20 at 6 15 02 PM" src="https://github.com/eissamonet/Password-Generator/assets/133728858/7c23bf09-e9b9-4a93-8373-dc941719d908">

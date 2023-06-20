@@ -12,8 +12,8 @@ function generatePassword() {
 // 1. Prompt the user for the password criteria
 //   a. password length 8-128 characters
 //   b. lowercase, uppercase, numbers, special characters
-passwordlength = prompt("Choose between 8-128 characters for your password.");
-if (passwordlength < 8 || numericCharacters > 128) {
+numberOfCharacters = prompt("Choose between 8-128 characters for your password.");
+if (numberOfCharacters < 8 || numericCharacters > 128) {
   return "Choose a valid number of characters.";
 } else if (isNaN(numberOfCharacters)) {
   numberOfCharacters = prompt("Enter a valid number.");

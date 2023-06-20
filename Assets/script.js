@@ -18,7 +18,7 @@ if (numericCharacters < 8 || numericCharacters > 128) {
 } else if (isNaN(numberOfCharacters)) {
   numberOfCharacters = prompt("Enter a valid number.");
 }
-// User password options
+// Validate password options
 hasUppercase = confirm("Do you want uppercase characters?");
 if (hasUppercase) {
   alert ("Your password will have uppercase characters.");

@@ -18,7 +18,7 @@ if (numericCharacters < 8 || numericCharacters > 128) {
 } else if (isNaN(numberOfCharacters)) {
   numberOfCharacters = prompt("Enter a valid number.");
 }
-
+// User password options
 hasUppercase = confirm("Do you want uppercase characters?");
 if (hasUppercase) {
   alert ("Your password will have uppercase characters.");
@@ -56,7 +56,18 @@ if (hasLowercase === false && hasNumbers === false && hasSpecial === false && ha
   return "Select at least one character type.";
 }
 // 3. Generate password based on criteria
-
+if (hasUppercase) {
+  possibleCharacters = possibleCharacters.concat(uppercasecharacters);
+}
+if (hasLowerercase) {
+  possibleCharacters = possibleCharacters.concat(lowercasecharacters);
+}
+if (hasSpecial) {
+  possibleCharacters = possibleCharacters.concat(specialcharacters);
+}
+if (hasNumbers) {
+  possibleCharacters = possibleCharacters.concat(numericcharacters);
+}
 
 // 4. display password on the page
   return "Generated password will go here!";

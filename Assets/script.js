@@ -24,26 +24,37 @@ if (hasUppercase) {
   alert ("Your password will have uppercase characters.");
 }
 else {
-  alert("Your password will NOT have uppercase");
+  alert("Your password will NOT have uppercase.");
 }
 
 hasLowercase = confirm("Do you want lowercase characters?");
-if (hasUppercase) {
-  alert ("Your password will have lowerrcase characters.");
+if (hasLowercase) {
+  alert ("Your password will have lowercase characters.");
 }
 else {
-  alert("Your password will NOT have lowercase");
+  alert("Your password will NOT have lowercase characters.");
 }
 
 hasSpecial = confirm("Do you want special characters?");
-if (hasUppercase) {
+if (hasSpecial) {
   alert ("Your password will have special characters.");
 }
 else {
-  alert("Your password will NOT have special characters");
+  alert("Your password will NOT have special characters.");
+}
+
+hasNumbers = confirm("Do you want numbers?");
+if (hasNumbers) {
+  alert ("Your password will have numbers.");
+}
+else {
+  alert("Your password will NOT have numbers");
 }
 
 // 2. Validate input
+if (hasLowercase === false && hasNumbers === false && hasSpecial === false && hasUppercase === false) {
+  return "Select at least one character type.";
+}
 // 3. Generate password based on criteria
 
 

@@ -1,8 +1,8 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+
 function generatePassword() {
-  console.log ("hey");
   // Array of password options/characters
   var uppercaseCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V","W","X", "Y", "Z"];
   var lowercaseCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -12,8 +12,8 @@ function generatePassword() {
 // 1. Prompt the user for the password criteria
 //   a. password length 8-128 characters
 //   b. lowercase, uppercase, numbers, special characters
-numberOfCharacters = prompt("Choose between 8-128 characters for your password.");
-if (numericCharacters < 8 || numericCharacters > 128) {
+passwordlength = prompt("Choose between 8-128 characters for your password.");
+if (passwordlength < 8 || numericCharacters > 128) {
   return "Choose a valid number of characters.";
 } else if (isNaN(numberOfCharacters)) {
   numberOfCharacters = prompt("Enter a valid number.");
@@ -56,32 +56,17 @@ if (hasLowercase === false && hasNumbers === false && hasSpecial === false && ha
   return "Select at least one character type.";
 }
 // 3. Generate password based on criteria
-if (hasUppercase) {
-  possibleCharacters = possibleCharacters.concat(uppercaseCharacters);
-}
-if (hasLowerercase) {
-  possibleCharacters = possibleCharacters.concat(lowercaseCharacters);
-}
-if (hasSpecial) {
-  possibleCharacters = possibleCharacters.concat(specialCharacters);
-}
-if (hasNumbers) {
-  possibleCharacters = possibleCharacters.concat(numericCharacters);
-}
-
 
 var finalPassword = ""
 for (var i = 0; i < numberOfCharacters; i++) {
-  var rng = [Math.floor(Math.random() * possibleCharacters.length)];
+  var rng = [Math.floor(Math.random() * numberOfCharacters.length)];
+  finalPassword = finalPassword + numberOfCharacters[rng];
 }
 
+console.log(finalPassword);
 // 4. display password on the page
-  return "Generated password will go here!";
+return finalPassword;
 }
-
-
- 
-
 
 // Write password to the #password input
 function writePassword() {
@@ -91,6 +76,5 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);

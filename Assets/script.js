@@ -21,7 +21,7 @@ if (numericCharacters < 8 || numericCharacters > 128) {
 // Validate password options
 hasUppercase = confirm("Do you want uppercase characters?");
 if (hasUppercase) {
-  alert ("Your password will have uppercase characters.");
+  alert("Your password will have uppercase characters.");
 }
 else {
   alert("Your password will NOT have uppercase.");
@@ -29,7 +29,7 @@ else {
 
 hasLowercase = confirm("Do you want lowercase characters?");
 if (hasLowercase) {
-  alert ("Your password will have lowercase characters.");
+  alert("Your password will have lowercase characters.");
 }
 else {
   alert("Your password will NOT have lowercase characters.");
@@ -37,7 +37,7 @@ else {
 
 hasSpecial = confirm("Do you want special characters?");
 if (hasSpecial) {
-  alert ("Your password will have special characters.");
+  alert("Your password will have special characters.");
 }
 else {
   alert("Your password will NOT have special characters.");
@@ -45,7 +45,7 @@ else {
 
 hasNumbers = confirm("Do you want numbers?");
 if (hasNumbers) {
-  alert ("Your password will have numbers.");
+  alert("Your password will have numbers.");
 }
 else {
   alert("Your password will NOT have numbers");
@@ -57,16 +57,22 @@ if (hasLowercase === false && hasNumbers === false && hasSpecial === false && ha
 }
 // 3. Generate password based on criteria
 if (hasUppercase) {
-  possibleCharacters = possibleCharacters.concat(uppercasecharacters);
+  possibleCharacters = possibleCharacters.concat(uppercaseCharacters);
 }
 if (hasLowerercase) {
-  possibleCharacters = possibleCharacters.concat(lowercasecharacters);
+  possibleCharacters = possibleCharacters.concat(lowercaseCharacters);
 }
 if (hasSpecial) {
-  possibleCharacters = possibleCharacters.concat(specialcharacters);
+  possibleCharacters = possibleCharacters.concat(specialCharacters);
 }
 if (hasNumbers) {
-  possibleCharacters = possibleCharacters.concat(numericcharacters);
+  possibleCharacters = possibleCharacters.concat(numericCharacters);
+}
+
+
+var finalPassword = ""
+for (var i = 0; i < numberOfCharacters; i++) {
+  var rng = [Math.floor(Math.random() * possibleCharacters.length)];
 }
 
 // 4. display password on the page
